@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-56dp">
+
+        <ImageView
+            android:id="@+id/ZakarImg"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:background="#FF5722"
+            app:srcCompat="@drawable/header1" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="535dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainTab"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        android:background="#D16C24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tabIconTint="@color/white"
+        app:tabIndicator="@android:drawable/bottom_bar"
+        app:tabIndicatorColor="#FFC107"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextColor="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/zakar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_zakar"
+            android:onClick="onZakarCall"
+            app:tint="#FFC107" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_calendar"
+            android:onClick="calendarCall"
+            android:overScrollMode="always" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@android:drawable/btn_star"
+            android:onClick="starCall" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:onClick="onInfoCall" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_mail"
+            android:onClick="onContactCall" />
+    </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
